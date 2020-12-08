@@ -20,7 +20,7 @@ public class QuestionEntity {
     private String answer;
     private String level;
     private String questionType;
- @JsonIgnore
+   @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity user;

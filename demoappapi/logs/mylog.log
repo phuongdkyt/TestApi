@@ -4084,3 +4084,57 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 08-12-2020 12:20:46.894 INFO  [task-1] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 08-12-2020 12:20:47.094 INFO  [restartedMain] org.springframework.data.repository.config.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
 08-12-2020 12:20:47.102 INFO  [restartedMain] com.example.demoapp.demo.DemoApplication - Started DemoApplication in 36.356 seconds (JVM running for 37.4)
+08-12-2020 12:23:31.214 INFO  [restartedMain] com.example.demoapp.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_261 on DESKTOP-71UR9TB with PID 11084 (C:\Users\phuong99\OneDrive\Desktop\SpringBoot\demoappapi\target\classes started by phuong99 in C:\Users\phuong99\OneDrive\Desktop\SpringBoot\demoappapi)
+08-12-2020 12:23:31.217 INFO  [restartedMain] com.example.demoapp.demo.DemoApplication - No active profile set, falling back to default profiles: default
+08-12-2020 12:23:31.314 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08-12-2020 12:23:31.315 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08-12-2020 12:23:32.077 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+08-12-2020 12:23:32.139 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+08-12-2020 12:23:32.744 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+08-12-2020 12:23:32.751 INFO  [restartedMain] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+08-12-2020 12:23:32.752 INFO  [restartedMain] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+08-12-2020 12:23:32.862 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+08-12-2020 12:23:32.862 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1546 ms
+08-12-2020 12:23:33.004 INFO  [restartedMain] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+08-12-2020 12:23:33.045 INFO  [task-1] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-12-2020 12:23:33.077 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-12-2020 12:23:33.096 INFO  [task-1] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.23.Final
+08-12-2020 12:23:33.290 INFO  [task-1] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+08-12-2020 12:23:33.375 WARN  [restartedMain] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+08-12-2020 12:23:33.399 INFO  [task-1] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+08-12-2020 12:23:33.471 WARN  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+08-12-2020 12:23:33.509 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+08-12-2020 12:23:33.512 INFO  [restartedMain] org.springframework.data.repository.config.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+08-12-2020 12:23:33.961 INFO  [task-1] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+08-12-2020 12:23:33.975 INFO  [task-1] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-12-2020 12:23:35.247 INFO  [task-1] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-12-2020 12:23:35.257 INFO  [task-1] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-12-2020 12:23:35.459 INFO  [restartedMain] org.springframework.data.repository.config.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+08-12-2020 12:23:35.467 INFO  [restartedMain] com.example.demoapp.demo.DemoApplication - Started DemoApplication in 4.716 seconds (JVM running for 5.766)
+08-12-2020 12:43:59.946 INFO  [restartedMain] com.example.demoapp.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_261 on DESKTOP-71UR9TB with PID 2904 (C:\Users\phuong99\OneDrive\Desktop\SpringBoot\demoappapi\target\classes started by phuong99 in C:\Users\phuong99\OneDrive\Desktop\SpringBoot\demoappapi)
+08-12-2020 12:43:59.949 INFO  [restartedMain] com.example.demoapp.demo.DemoApplication - No active profile set, falling back to default profiles: default
+08-12-2020 12:44:00.007 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08-12-2020 12:44:00.007 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08-12-2020 12:44:00.792 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+08-12-2020 12:44:00.855 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+08-12-2020 12:44:01.437 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+08-12-2020 12:44:01.445 INFO  [restartedMain] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+08-12-2020 12:44:01.445 INFO  [restartedMain] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+08-12-2020 12:44:01.543 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+08-12-2020 12:44:01.544 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1534 ms
+08-12-2020 12:44:01.677 INFO  [restartedMain] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+08-12-2020 12:44:01.716 INFO  [task-1] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-12-2020 12:44:01.746 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-12-2020 12:44:01.766 INFO  [task-1] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.23.Final
+08-12-2020 12:44:01.966 INFO  [task-1] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+08-12-2020 12:44:02.047 WARN  [restartedMain] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+08-12-2020 12:44:02.069 INFO  [task-1] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+08-12-2020 12:44:02.143 WARN  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+08-12-2020 12:44:02.179 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+08-12-2020 12:44:02.182 INFO  [restartedMain] org.springframework.data.repository.config.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+08-12-2020 12:44:02.612 INFO  [task-1] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+08-12-2020 12:44:02.624 INFO  [task-1] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-12-2020 12:44:03.424 INFO  [task-1] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-12-2020 12:44:03.432 INFO  [task-1] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-12-2020 12:44:03.631 INFO  [restartedMain] org.springframework.data.repository.config.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+08-12-2020 12:44:03.639 INFO  [restartedMain] com.example.demoapp.demo.DemoApplication - Started DemoApplication in 4.12 seconds (JVM running for 5.237)

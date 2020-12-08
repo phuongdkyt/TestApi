@@ -22,6 +22,7 @@ public class TestEntity {
     @OneToMany(mappedBy = "test")
     List<TaskEntity> taskEntityList=new ArrayList<>();
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     UserEntity user;

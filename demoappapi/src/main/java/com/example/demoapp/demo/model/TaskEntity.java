@@ -14,14 +14,17 @@ public class TaskEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id ;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     UserEntity user;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "test_id")
     TestEntity test;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "question_id")
     QuestionEntity question;

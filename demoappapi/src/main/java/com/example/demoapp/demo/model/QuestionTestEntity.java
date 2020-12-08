@@ -1,5 +1,7 @@
 package com.example.demoapp.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,11 +12,12 @@ public class QuestionTestEntity {
     private Integer id;
 
 
-
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "test_id")
     private TestEntity test;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "question_id")
     private QuestionEntity question;

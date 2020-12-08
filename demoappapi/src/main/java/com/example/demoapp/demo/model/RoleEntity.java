@@ -10,8 +10,10 @@ public class RoleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     @Column(nullable = false,unique = true)
     private String roleName;
+
     @OneToMany(mappedBy = "role")
     private List<UserEntity> userEntityList =new ArrayList<>();
 }

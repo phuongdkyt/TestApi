@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "tbl_cauhoi")
+@Table(name = "tbl_question")
 public class QuestionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,9 +25,11 @@ public class QuestionEntity {
     @JoinColumn(name = "user_id")
     private UserEntity user;
 
-    @OneToMany(mappedBy = "test")
+    @OneToMany(mappedBy = "question")
     List<TaskEntity> taskEntityList=new ArrayList<>();
 
+  @OneToMany(mappedBy = "question")
+  List<QuestionTestEntity> questionTestEntityList=new ArrayList<>();
 
 
 

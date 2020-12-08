@@ -31,12 +31,15 @@ public class UserEntity {
     private UserEntity user;
 
     @OneToMany(mappedBy = "user")
-    private List<QuestionEntity> questionEntityList;
+    private List<QuestionEntity> questionEntityList=new ArrayList<>();
 
     @OneToMany(mappedBy = "user")
-    private List<TaskEntity> taskEntityList;
+    private List<TaskEntity> taskEntityList=new ArrayList<>();
 
     @OneToMany(mappedBy = "user")
-    private List<TestEntity> testEntities;
+    private List<TestEntity> testEntities=new ArrayList<>();
+
+    @OneToMany(mappedBy = "user")
+    private List<UserTestEntity> userTestEntityList=new ArrayList<>();
 
 }

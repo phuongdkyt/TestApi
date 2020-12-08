@@ -17,11 +17,21 @@ public class TestEntity {
     private String testName;
     @Column(nullable = false)
     private Integer testTime;
-
     private Date testDate;
+
     @OneToMany(mappedBy = "test")
     List<TaskEntity> taskEntityList=new ArrayList<>();
 
- 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    UserEntity user;
+
+    @OneToMany(mappedBy = "test")
+    private List<UserTestEntity> userTestEntityList=new ArrayList<>();
+
+    @OneToMany(mappedBy = "test")
+    private List<QuestionTestEntity> questionTestEntityList=new ArrayList<>();
+
+
 
 }

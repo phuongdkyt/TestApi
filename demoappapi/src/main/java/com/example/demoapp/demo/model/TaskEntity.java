@@ -13,6 +13,7 @@ public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id ;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     UserEntity user;

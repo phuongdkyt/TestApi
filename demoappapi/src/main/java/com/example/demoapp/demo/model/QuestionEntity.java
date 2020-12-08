@@ -9,9 +9,10 @@ import java.util.List;
 @Entity
 @Table(name = "tbl_question")
 public class QuestionEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Integer id;
+    private Integer id;
     private String question;
     private String a;
     private String b;
@@ -20,16 +21,17 @@ public class QuestionEntity {
     private String answer;
     private String level;
     private String questionType;
-   @JsonIgnore
+
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity user;
 
     @OneToMany(mappedBy = "question")
-    List<TaskEntity> taskEntityList=new ArrayList<>();
+    List<TaskEntity> taskEntityList = new ArrayList<>();
 
-  @OneToMany(mappedBy = "question")
-  List<QuestionTestEntity> questionTestEntityList=new ArrayList<>();
+    @OneToMany(mappedBy = "question")
+    List<QuestionTestEntity> questionTestEntityList = new ArrayList<>();
 
 
 

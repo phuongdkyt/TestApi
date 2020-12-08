@@ -33,6 +33,4 @@ public class TestEntity {
     @OneToMany(mappedBy = "test")
     private List<QuestionTestEntity> questionTestEntityList=new ArrayList<>();
 
-
-
 }

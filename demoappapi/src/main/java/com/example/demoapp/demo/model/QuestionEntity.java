@@ -3,10 +3,11 @@ package com.example.demoapp.demo.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
-//@Table(name = "tbl_cauhoi")
+@Entity
+@Table(name = "tbl_cauhoi")
 public class QuestionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,8 +19,16 @@ public class QuestionEntity {
     private String d;
     private String answer;
     private String level;
-
     private String questionType;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
+
+    @OneToMany(mappedBy = "test")
+    List<TaskEntity> taskEntityList=new ArrayList<>();
+
+
 
 
 

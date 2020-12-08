@@ -7,13 +7,25 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
-//@Table(name = "tbl_ketqua")
+@Entity
+@Table(name = "tbl_ketqua")
 public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id ;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    UserEntity user;
+
+    @ManyToOne
+    @JoinColumn(name = "test_id")
+    TestEntity test;
+
+    @ManyToOne
+    @JoinColumn(name = "question_id")
+    QuestionEntity question;
+
     @Column(nullable = false)
-    private Integer result;
+    private String taskAwnser;
 
 }

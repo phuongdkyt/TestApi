@@ -30,6 +30,13 @@ public class UserEntity {
     @JoinColumn(name = "user_id")
     private UserEntity user;
 
+    @OneToMany(mappedBy = "user")
+    private List<QuestionEntity> questionEntityList;
 
+    @OneToMany(mappedBy = "user")
+    private List<TaskEntity> taskEntityList;
+
+    @OneToMany(mappedBy = "user")
+    private List<TestEntity> testEntities;
 
 }

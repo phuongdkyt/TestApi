@@ -1,11 +1,17 @@
 package com.example.demoapp.demo.controller;
 
 import com.example.demoapp.demo.model.QuestionEntity;
+import com.example.demoapp.demo.model.RoleEntity;
+import com.example.demoapp.demo.model.UserEntity;
 import com.example.demoapp.demo.repository.QuestionRepository;
+import com.example.demoapp.demo.repository.UserRepository;
+import com.example.demoapp.demo.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -14,10 +20,13 @@ import java.util.Optional;
 public class QuestionController {
     @Autowired
     private QuestionRepository questionRepository;
-
+    @Autowired
+    private QuestionService questionService;
+    @Autowired
+    private UserRepository userRepository;
     @GetMapping
-    public Iterable<QuestionEntity> getAllQuestion() {
-        return questionRepository.findAll();
+    public List<QuestionEntity> read(){
+        return questionService.read();
     }
 
     @GetMapping("/{id}")
@@ -37,10 +46,16 @@ public class QuestionController {
         }
     }
 
-    @PostMapping("/add-question")
+    @PostMapping("/add-question/{level}")
     @ResponseStatus(HttpStatus.CREATED)
-    public QuestionEntity saveQuestion(@RequestBody QuestionEntity questionEntity) {
-        return questionRepository.save(questionEntity);
+    public void saveQuestion(@RequestBody List<QuestionEntity> questionListEntity,
+    @PathVariable(value = "level", required = false) String level
+    ) {
+        Optional<UserEntity> userEntity= userRepository.findById(1);
+        for(int i=0;i<questionListEntity.size();i++){
+            questionListEntity.get(i).setUser(userEntity.get());
+            questionListEntity.get(i).setLevel(level);
+        }
+        questionService.save(questionListEntity);
     }
-
 }

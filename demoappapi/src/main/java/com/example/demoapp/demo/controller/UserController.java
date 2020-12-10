@@ -1,6 +1,8 @@
 package com.example.demoapp.demo.controller;
 
+import com.example.demoapp.demo.model.RoleEntity;
 import com.example.demoapp.demo.model.UserEntity;
+import com.example.demoapp.demo.repository.RoleRepository;
 import com.example.demoapp.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -15,6 +17,8 @@ import java.util.Optional;
 public class UserController {
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    RoleRepository repository;
 
     @GetMapping
     public Iterable<UserEntity> getAllUser(){
@@ -40,6 +44,8 @@ public class UserController {
     @PostMapping("/add-user")
     @ResponseStatus(HttpStatus.CREATED)
     public UserEntity saveUser(@RequestBody UserEntity userEntity){
+        Optional<RoleEntity> roleEntity= repository.findById(1);
+        userEntity.setRole(roleEntity.get());
         return userRepository.save(userEntity);
     }
 

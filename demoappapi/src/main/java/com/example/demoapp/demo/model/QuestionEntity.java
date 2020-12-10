@@ -1,11 +1,12 @@
 package com.example.demoapp.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Data
 @Entity
 @Table(name = "tbl_question")
 public class QuestionEntity {
@@ -32,8 +33,5 @@ public class QuestionEntity {
 
     @OneToMany(mappedBy = "question")
     List<QuestionTestEntity> questionTestEntityList = new ArrayList<>();
-
-
-
 
 }

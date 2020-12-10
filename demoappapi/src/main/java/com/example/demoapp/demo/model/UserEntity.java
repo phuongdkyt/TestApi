@@ -1,11 +1,12 @@
 package com.example.demoapp.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Data
 @Entity
 @Table(name = "tbl_user")
 public class UserEntity {
@@ -23,7 +24,7 @@ public class UserEntity {
     @ManyToOne
     @JoinColumn(name = "role_id")
     private RoleEntity role;
-
+    @JsonIgnore
     @OneToMany(mappedBy = "user")
     private List<UserEntity> userEntityList=new ArrayList<>();
 
